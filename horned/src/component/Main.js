@@ -12,17 +12,17 @@ class Main extends React.Component {
       <main>
         <div>
           <h2>UniWhal</h2>
-          <img src={UniWhal} alt="" />
+          <img src={UniWhal} alt="" title="Default Value" />
           <p>A unicorn and a narwhal nuzzling their horns</p>
         </div>
         <div>
           <h2>Rhino Family</h2>
-          <img src={Rhino_Family} alt="" />
+          <img src={Rhino_Family} alt="" title="Default Value" />
           <p>Mother (or father) rhino with two babies</p>
         </div>
         <div>
           <h2>Unicorn Head</h2>
-          <img src={Unicorn_Head} alt="" />
+          <img src={Unicorn_Head} alt="" title="Default Value" />
           <p>Someone wearing a creepy unicorn head mask</p>
         </div>
       </main>
