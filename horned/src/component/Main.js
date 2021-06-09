@@ -1,11 +1,12 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import data from "./data.json";
+import CardGroup from "react-bootstrap/CardGroup";
+
 class Main extends React.Component {
   render() {
-    console.log("hornedbeast", this.props);
     return (
-      <div>
+      <CardGroup>
         {data.map((beast) => {
           return (
             <HornedBeast
@@ -15,7 +16,7 @@ class Main extends React.Component {
             />
           );
         })}
-      </div>
+      </CardGroup>
     );
   }
 }

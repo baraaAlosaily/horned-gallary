@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "react-bootstrap/Card";
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -8,24 +9,36 @@ class HornedBeast extends React.Component {
   increaseTheCounter = () => {
     this.setState({ count: this.state.count + 1 });
   };
+
+  showModal = () => {
+    this.props.sowModal({
+      name: this.props.title,
+      description: this.props.description,
+      imgUrl: this.props.img,
+    });
+  };
+
   render() {
     return (
-      <main>
-        <div>
-          <h2>{this.props.title}</h2>
-          <img
-            onClick={this.increaseTheCounter}
-            style={{ width: "25rem" }}
-            src={this.props.img}
-            alt=""
-            title={this.props.title}
-          />
-          <p>{this.props.description}</p>
-          <p>
-            <span>{"\u2728"}</span> {this.state.count}
-          </p>
-        </div>
-      </main>
+      <div>
+        <Card bg="Dark" style={{ width: "18rem" }} onClick={this.showModal}>
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Img
+              style={{ width: "15rem" }}
+              src={this.props.img}
+              alt=""
+              title={this.props.title}
+            />
+
+            <Card.Text>{this.props.description}</Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            {"\u2728"}
+            {this.state.count}
+          </Card.Footer>
+        </Card>
+      </div>
     );
   }
 }
