@@ -26,3 +26,18 @@ Start time: 2 pm
 Finish time: 7 pm
 
 Actual time needed to complete: 5 hours
+
+# Class02 :
+
+Number and name of feature: I used 4 features
+1.bootstrap
+2.show Card
+3.props
+4.obj
+
+Estimate of time needed to complete: 5 hours
+Start time: 2 pm
+
+Finish time: 7 pm
+
+Actual time needed to complete: 5 hours

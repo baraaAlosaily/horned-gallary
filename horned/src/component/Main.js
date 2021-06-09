@@ -1,21 +1,21 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import data from "./data.json";
+import CardGroup from "react-bootstrap/CardGroup";
 class Main extends React.Component {
   render() {
-    console.log("hornedbeast", this.props);
     return (
-      <div>
-        {data.map((beast) => {
+      <CardGroup>
+        {this.props.Data.map((beast) => {
           return (
             <HornedBeast
               title={beast.title}
               img={beast.image_url}
               description={beast.description}
+              handleModel={this.props.handleModel}
             />
           );
         })}
-      </div>
+      </CardGroup>
     );
   }
 }

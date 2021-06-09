@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card_style.css";
 
 class Header extends React.Component {
   render() {
