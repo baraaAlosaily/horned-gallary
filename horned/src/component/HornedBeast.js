@@ -10,25 +10,32 @@ class HornedBeast extends React.Component {
     this.setState({ count: this.state.count + 1 });
   };
 
-  showModal = () => {
-    this.props.sowModal({
-      name: this.props.title,
-      description: this.props.description,
-      imgUrl: this.props.img,
-    });
-  };
-
   render() {
     return (
       <div>
-        <Card bg="Dark" style={{ width: "18rem" }} onClick={this.showModal}>
+        <Card
+          style={{
+            width: "15rem",
+            background: "black",
+            color: "white",
+            margin: "1rem",
+          }}
+        >
           <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Title>{this.props.name}</Card.Title>
             <Card.Img
-              style={{ width: "15rem" }}
+              style={{ width: "13rem", height: "13rem" }}
               src={this.props.img}
               alt=""
               title={this.props.title}
+              onClick={() => {
+                this.increaseTheCounter();
+                this.props.handleModel(
+                  this.props.title,
+                  this.props.img,
+                  this.props.description
+                );
+              }}
             />
 
             <Card.Text>{this.props.description}</Card.Text>
